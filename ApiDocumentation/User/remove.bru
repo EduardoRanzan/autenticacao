@@ -1,0 +1,26 @@
+meta {
+  name: remove
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{host}}users/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "email": "email2",
+    "senha": "senha2"
+  }
+}
